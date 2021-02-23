@@ -23,7 +23,7 @@ jobs:
     - name: Build with Maven
       run: mvn clean compile
     - name: connect with GCP
-    - uses: google-github-actions/setup-gcloud@master
+      uses: google-github-actions/setup-gcloud@master
       with:
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         export_default_credentials: true
