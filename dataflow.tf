@@ -2,6 +2,10 @@ variable "project_id" {
   description = "project id"
 }
 
+variable "region" {
+  description = "region"
+}
+
 
 resource "google_dataflow_job" "big_data_job" {
   name              = "dataflow-job"
