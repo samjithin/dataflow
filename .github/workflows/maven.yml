@@ -34,7 +34,7 @@ jobs:
       uses: google-github-actions/upload-cloud-storage@main
       with:
         path: /home/runner/work/dataflow/dataflow/src
-        destination: gs://jit/builddata
+        destination: jit/builddata
 
    
     - name: Setup Terraform
