@@ -22,6 +22,13 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn clean compile
+      
+    - uses: actions/checkout@master
+    - name: SonarQube Scan
+      uses: kitabisa/sonarqube-action@master
+      with:
+        host: http://127.0.0.1:9000
+        login: 55b5f38b5b2e7d0e4325c5381c0a9ca753d56fd3
     - name: connect with GCP
       uses: google-github-actions/setup-gcloud@master
       with:
