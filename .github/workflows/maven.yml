@@ -37,6 +37,7 @@ jobs:
       with:
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         export_default_credentials: true
+        
     - name: build and upload to Google Cloud Storage
       run: mvn compile exec:java -Dexec.mainClass=com.google.cloud.teleport.templates.WordCount -Dexec.cleanupDaemonThreads=false -Dexec.args="--project=terraformlearning-284414 --stagingLocation=gs://jit/staging --tempLocation=gs://jit/temp --templateLocation=gs://jit/templates/template-name.json --region=us-central1 --runner=DataflowRunner"
 
